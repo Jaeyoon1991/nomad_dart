@@ -13,6 +13,8 @@ void main() {
   List<int> newNumbers = [1, 2, 3, 4];
   numbers.add(5);
 
+  // 뒤에 ,를 붙이면 보기 쉽게 정렬된다.
+  // collection if
   bool giveMeFive = true;
   var testNumbers = [
     1,
@@ -21,6 +23,10 @@ void main() {
     4,
     if (giveMeFive) 5,
   ];
+
+  if (giveMeFive) {
+    testNumbers.add(6);
+  }
 
   print(testNumbers);
 }
