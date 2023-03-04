@@ -11,7 +11,8 @@ void main() {
   // 클래스에셔 변수나 프로퍼티를 선언할 때 지정한다.
   String names = '재윤s';
 
-  // dynamic 타입, 어떤 타입도 될 수 있다.
+  // dynamic => 어떤 타입도 될 수 있다.
+  // dynamic은 타입이 아닌, 타입 지정을 잠시 미룬다는 표시일 뿐이다.
   // 한 번 값이 할당 되어도 바뀔 수 있다.
   dynamic ages;
   var age;
