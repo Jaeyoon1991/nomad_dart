@@ -1,5 +1,10 @@
 // class 에서는 타입을 반드시 명시해야 한다.
 
+//4.6 enums
+enum Team { red, blue }
+
+enum XPLevel { beginner, medium, pro }
+
 // 4.0 Your first darat class
 class Player {
   String name = 'nico';
@@ -127,6 +132,23 @@ class Player7 {
   }
 }
 
+//4.5 Casecade Notation
+class Player8 {
+  String name;
+  XPLevel xp;
+  Team team;
+
+  Player8({
+    required this.name,
+    required this.xp,
+    required this.team,
+  });
+
+  void sayHello() {
+    print("hi my name is $name");
+  }
+}
+
 void main() {
   var player = Player();
   print(player.name);
@@ -196,4 +218,14 @@ void main() {
     var player = Player7.fromJson(playerJson);
     player.sayHello();
   });
+
+  var player8 = Player8(
+    name: 'nico',
+    xp: XPLevel.beginner,
+    team: Team.red,
+  )
+    ..name = 'les'
+    ..xp = XPLevel.pro
+    ..team = Team.blue
+    ..sayHello();
 }
