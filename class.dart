@@ -1,5 +1,10 @@
 // class 에서는 타입을 반드시 명시해야 한다.
 
+// 4.7 Abstarct Class
+abstract class Human {
+  void walk();
+}
+
 //4.6 enums
 enum Team { red, blue }
 
@@ -133,7 +138,7 @@ class Player7 {
 }
 
 //4.5 Casecade Notation
-class Player8 {
+class Player8 extends Human {
   String name;
   XPLevel xp;
   Team team;
@@ -144,8 +149,21 @@ class Player8 {
     required this.team,
   });
 
+  @override
+  void walk() {
+    // TODO: implement walk
+    print("I'm Human");
+  }
+
   void sayHello() {
     print("hi my name is $name");
+  }
+}
+
+// 추상클래스는 특정 메서드를 강제한다.
+class Coach extends Human {
+  void walk() {
+    print("I'm coach");
   }
 }
 
